@@ -1,0 +1,29 @@
+{
+  "name": "ai-media-pipeline-cli",
+  "version": "1.0.0",
+  "description": "CLI for generating consistent image-to-video sequences with OpenAI, Gemini image generation, and Veo on Vertex AI.",
+  "type": "module",
+  "bin": {
+    "ai-media-pipeline": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "lint": "node --check src/cli.js && node --check src/pipeline/run-pipeline.js && node --check src/providers/openai.js && node --check src/providers/gemini.js && node --check src/providers/vertex.js && node --check src/lib/video-stitch.js"
+  },
+  "keywords": [
+    "openai",
+    "gemini",
+    "veo",
+    "vertex-ai",
+    "video-generation",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^1.31.0",
+    "dotenv": "^16.6.1",
+    "google-auth-library": "^10.5.0",
+    "openai": "^6.9.1"
+  }
+}
